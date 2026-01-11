@@ -1,0 +1,17 @@
+.typingText {
+    font-family: 'inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-left: 4px;
+    color: #616161;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1ch;              /* same width as one character */
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
