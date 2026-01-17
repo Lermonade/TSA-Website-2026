@@ -1,12 +1,12 @@
 header {
   width: 100%;
   height: var(--navbarHeight);
-  background-color: #FFFFFF;
+  background-color: var(--primaryColor);
   box-shadow: var(--shadow-elevation-medium);
 
   padding: 0px 128px;
 
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
