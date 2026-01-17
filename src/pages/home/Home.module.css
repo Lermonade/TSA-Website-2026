@@ -298,3 +298,62 @@
   top: 196px;
   z-index: 1;
 }
+
+.bentoBoard {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 64px 128px;
+  background-color: var(--secondaryColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.bentoBoardTitle {
+  font-family: Bradford LL;
+  font-weight: 450;
+  letter-spacing: -0.02em;
+  font-size: 3rem;
+  color: var(--primaryColor);
+  margin-bottom: 32px;
+}
+
+.bentoBoardContainer {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 200px 200px 200px;
+  gap: 16px;
+}
+
+.bentoSmall {
+  border-radius: 8px;
+  overflow: hidden;
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.bentoLarge {
+  border-radius: 8px;
+  overflow: hidden;
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.bentoImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transform: scale(1);
+  transition: filter 0.5s ease-in-out, transform 0.5s ease;
+}
+
+.bentoImage:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+  transition: filter 0.5s ease-in-out, transform 0.5s ease;
+}

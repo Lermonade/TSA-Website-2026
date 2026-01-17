@@ -173,6 +173,45 @@ function Home() {
             </div>
             <img src={wrench} alt="Wrench" className={styles.callToActionImage} />
           </section>
+
+          <section className={styles.bentoBoard}>
+            <h1 className={styles.bentoBoardTitle}>Gallery</h1>
+            <div className={styles.bentoBoardContainer}>
+              <div className={styles.bentoLarge}>
+                <img src={library} alt="Friendswood Library" className={styles.bentoImage}/>
+              </div>
+              <div className={styles.bentoSmall}>
+                <img src={stevensonPark} alt="Stevenson Park" className={styles.bentoImage}/>
+              </div>
+              <div className={styles.bentoLarge}>
+                <img src={pool} alt="Friendswood City Pool" className={styles.bentoImage}/>
+              </div>
+              <div className={styles.bentoSmall}>
+                <img src={shepherdsNook} alt="Shepherd's Nook" className={styles.bentoImage}/>
+              </div>
+              <div className={styles.bentoSmall}>
+                <img src={foodBankExt} alt="Houston Food Bank Exterior" className={styles.bentoImage}/>
+              </div> 
+              <div className={styles.bentoLarge}>
+                <img src={library} alt="Friendswood Library" className={styles.bentoImage}/>
+              </div>
+              <div className={styles.bentoSmall}>
+                <img src={stevensonPark} alt="Stevenson Park" className={styles.bentoImage}/>
+              </div>
+              <div className={styles.bentoSmall}>
+                <img src={foodBankExt} alt="Houston Food Bank Exterior" className={styles.bentoImage}/>
+              </div>
+              <div className={styles.bentoLarge}>
+                <img src={stevensonPark} alt="Stevenson Park" className={styles.bentoImage}/>
+              </div>
+              <div className={styles.bentoSmall}>
+                <img src={pool} alt="Friendswood City Pool" className={styles.bentoImage}/>
+              </div>
+              <div className={styles.bentoSmall}>
+                <img src={foodBankExt} alt="Houston Food Bank Exterior" className={styles.bentoImage}/>
+              </div>
+            </div>
+          </section>
         </main>
 
         <Footer />
