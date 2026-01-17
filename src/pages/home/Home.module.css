@@ -99,12 +99,11 @@
   border-top-right-radius: 11px;
   border-bottom-right-radius: 11px;
   background-color: var(--accentColor);
-}
-
-.searchButtonImage {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+  color: var(--textColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .description {
@@ -168,7 +167,7 @@
   border-radius: 8px;
   border: 2px solid var(--secondaryColor);
   background-color: var(--primaryColor);
-  box-shadow: var(--shadow-elevation-low);
+  box-shadow: var(--shadow-elevation-medium);
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -197,7 +196,7 @@
     font-family: 'inter', sans-serif;
     font-weight: 400;
     font-size: 1.5rem;
-    margin-right: 16px;
+    width: 168px;
 }
 
 .cardButton {
@@ -205,12 +204,9 @@
   cursor: pointer;
   height: 50px;
   width: 55px;
-}
-
-.cardButtonImage {
-  height: 40px;
-  width: 40px;
-  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cardTagGrid {
@@ -236,8 +232,69 @@
 }
 
 .calendar {
-    width: 100%;
-    height: 600px;
-    margin: 64px 0;
-    padding: 0 128px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 64px 128px;
+}
+
+.faq {
+  position: relative;
+  width: 100%;
+  padding: 64px 128px;
+}
+
+.callToAction {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 128px;
+}
+
+.callToActionContainer {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  border: 2px solid var(--secondaryColor);
+  border-radius: 16px;
+  padding: 64px 64px;
+}
+
+.callToActionText {
+  font-family: Bradford LL;
+  font-weight: 450;
+  font-size: 3rem;
+  letter-spacing: -0.02em;
+}
+
+.callToActionButton {
+  display: flex;
+  margin-top: 32px;
+  height: 35px;
+  width: 220px;
+  border-radius: 8px;
+  border: 2px solid var(--secondaryColor);
+  background-color: none;
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.callToActionImage {
+  position: absolute;
+  height: 400px;
+  width: auto;
+  right: 216px;
+  top: 196px;
+  z-index: 1;
 }

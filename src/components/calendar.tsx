@@ -67,7 +67,7 @@ const Calendar: React.FC = () => {
             key={index}
             className={styles.days}
         >
-            {day}
+            <div className={`${styles.dayNum} ${day === today.getDate() && currentMonth === today.getMonth() && currentYear === today.getFullYear() ? styles.today : ""}`}>{day}</div>
         </div>
         ))}
       </div>

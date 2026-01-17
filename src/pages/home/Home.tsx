@@ -2,13 +2,18 @@ import Footer from '../../components/footer'
 import Navbar from '../../components/navbar'
 import TypingText from '../../components/typingText'
 import Calendar from '../../components/calendar'
+import FAQ from '../../components/faq'
 import '../../global.css'
 import foodBank from '../../assets/images/foodbank.webp'
 import heroBG from '../../assets/images/heroBG2.png'
-import upRightArrow from '../../assets/images/upRightArrow.png'
-import searchIcon from '../../assets/images/searchIcon.png'
-import library from '../../assets/images/library.jpg';
+import foodBankExt from '../../assets/images/foodbankExt.webp'
+import library from '../../assets/images/library.png';
+import stevensonPark from '../../assets/images/stevensonPark.webp';
+import pool from '../../assets/images/pool.png';
+import shepherdsNook from '../../assets/images/shepherdsNook.png';
+import wrench from '../../assets/images/wrench.png'
 import styles from './Home.module.css'
+import { ArrowRight, Search, ArrowUpRight } from 'lucide-react'
 
 function Home() {
   return (
@@ -32,7 +37,7 @@ function Home() {
                   <p className={styles.searchForText}>Search for</p>
                   <TypingText />
                 </div>
-                <button className={styles.searchButton}><img src={searchIcon} alt="Search" className={styles.searchButtonImage}/></button>
+                <button className={styles.searchButton}>< Search size={24} strokeWidth={3}/></button>
               </div>
             </div>
           </section>
@@ -57,12 +62,80 @@ function Home() {
                 />
                 <div className={styles.cardHeaderGrid}>
                   <h2 className={styles.cardHeader}>Friendswood Library</h2>
-                  <button className={styles.cardButton}><img src={upRightArrow} alt="Link" className={styles.cardButtonImage}/></button>
+                  <button className={styles.cardButton}><ArrowUpRight size={32} strokeWidth={2}/></button>
                 </div>
                 <div className={styles.cardTagGrid}>
                   <h3 className={styles.cardTag}>Education</h3>
                   <h3 className={styles.cardTag}>Leisure</h3>
                   <h3 className={styles.cardTag}>Family</h3>
+                </div>
+              </div>
+
+              <div className={styles.projectCard}>
+                <img 
+                  src={stevensonPark}
+                  alt="Stevenson Park"
+                  className={styles.cardImage}
+                />
+                <div className={styles.cardHeaderGrid}>
+                  <h2 className={styles.cardHeader}>Stevenson Park</h2>
+                  <button className={styles.cardButton}><ArrowUpRight size={32} strokeWidth={2}/></button>
+                </div>
+                <div className={styles.cardTagGrid}>
+                  <h3 className={styles.cardTag}>Fitness</h3>
+                  <h3 className={styles.cardTag}>Leisure</h3>
+                  <h3 className={styles.cardTag}>Family</h3>
+                </div>
+              </div>
+
+              <div className={styles.projectCard}>
+                <img 
+                  src={pool}
+                  alt="Friendswood City Pool"
+                  className={styles.cardImage}
+                />
+                <div className={styles.cardHeaderGrid}>
+                  <h2 className={styles.cardHeader}>Friendswood City Pool</h2>
+                  <button className={styles.cardButton}><ArrowUpRight size={32} strokeWidth={2}/></button>
+                </div>
+                <div className={styles.cardTagGrid}>
+                  <h3 className={styles.cardTag}>Education</h3>
+                  <h3 className={styles.cardTag}>Leisure</h3>
+                  <h3 className={styles.cardTag}>Family</h3>
+                </div>
+              </div>
+
+              <div className={styles.projectCard}>
+                <img 
+                  src={foodBankExt}
+                  alt="Houston Food Bank"
+                  className={styles.cardImage}
+                />
+                <div className={styles.cardHeaderGrid}>
+                  <h2 className={styles.cardHeader}>Houston Food Bank</h2>
+                  <button className={styles.cardButton}><ArrowUpRight size={32} strokeWidth={2}/></button>
+                </div>
+                <div className={styles.cardTagGrid}>
+                  <h3 className={styles.cardTag}>Volunteer</h3>
+                  <h3 className={styles.cardTag}>Nonprofit</h3>
+                  <h3 className={styles.cardTag}>Service</h3>
+                </div>
+              </div>
+
+              <div className={styles.projectCard}>
+                <img 
+                  src={shepherdsNook}
+                  alt="ShepherdsNook"
+                  className={styles.cardImage}
+                />
+                <div className={styles.cardHeaderGrid}>
+                  <h2 className={styles.cardHeader}>Shepherd's Nook</h2>
+                  <button className={styles.cardButton}><ArrowUpRight size={32} strokeWidth={2}/></button>
+                </div>
+                <div className={styles.cardTagGrid}>
+                  <h3 className={styles.cardTag}>Nonprofit</h3>
+                  <h3 className={styles.cardTag}>Donation</h3>
+                  <h3 className={styles.cardTag}>Service</h3>
                 </div>
               </div>
 
@@ -74,75 +147,7 @@ function Home() {
                 />
                 <div className={styles.cardHeaderGrid}>
                   <h2 className={styles.cardHeader}>Friendswood Library</h2>
-                  <button className={styles.cardButton}><img src={upRightArrow} alt="Link" className={styles.cardButtonImage}/></button>
-                </div>
-                <div className={styles.cardTagGrid}>
-                  <h3 className={styles.cardTag}>Education</h3>
-                  <h3 className={styles.cardTag}>Leisure</h3>
-                  <h3 className={styles.cardTag}>Family</h3>
-                </div>
-              </div>
-
-              <div className={styles.projectCard}>
-                <img 
-                  src={library}
-                  alt="Friendswood Library"
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardHeaderGrid}>
-                  <h2 className={styles.cardHeader}>Friendswood Library</h2>
-                  <button className={styles.cardButton}><img src={upRightArrow} alt="Link" className={styles.cardButtonImage}/></button>
-                </div>
-                <div className={styles.cardTagGrid}>
-                  <h3 className={styles.cardTag}>Education</h3>
-                  <h3 className={styles.cardTag}>Leisure</h3>
-                  <h3 className={styles.cardTag}>Family</h3>
-                </div>
-              </div>
-
-              <div className={styles.projectCard}>
-                <img 
-                  src={library}
-                  alt="Friendswood Library"
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardHeaderGrid}>
-                  <h2 className={styles.cardHeader}>Friendswood Library</h2>
-                  <button className={styles.cardButton}><img src={upRightArrow} alt="Link" className={styles.cardButtonImage}/></button>
-                </div>
-                <div className={styles.cardTagGrid}>
-                  <h3 className={styles.cardTag}>Education</h3>
-                  <h3 className={styles.cardTag}>Leisure</h3>
-                  <h3 className={styles.cardTag}>Family</h3>
-                </div>
-              </div>
-
-              <div className={styles.projectCard}>
-                <img 
-                  src={library}
-                  alt="Friendswood Library"
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardHeaderGrid}>
-                  <h2 className={styles.cardHeader}>Friendswood Library</h2>
-                  <button className={styles.cardButton}><img src={upRightArrow} alt="Link" className={styles.cardButtonImage}/></button>
-                </div>
-                <div className={styles.cardTagGrid}>
-                  <h3 className={styles.cardTag}>Education</h3>
-                  <h3 className={styles.cardTag}>Leisure</h3>
-                  <h3 className={styles.cardTag}>Family</h3>
-                </div>
-              </div>
-
-              <div className={styles.projectCard}>
-                <img 
-                  src={library}
-                  alt="Friendswood Library"
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardHeaderGrid}>
-                  <h2 className={styles.cardHeader}>Friendswood Library</h2>
-                  <button className={styles.cardButton}><img src={upRightArrow} alt="Link" className={styles.cardButtonImage}/></button>
+                  <button className={styles.cardButton}><ArrowUpRight size={32} strokeWidth={2}/></button>
                 </div>
                 <div className={styles.cardTagGrid}>
                   <h3 className={styles.cardTag}>Education</h3>
@@ -155,6 +160,18 @@ function Home() {
 
           <section className={styles.calendar}>
             <Calendar />
+          </section>
+
+          <section className={styles.faq}>
+            <FAQ />
+          </section>
+
+          <section className={styles.callToAction}>
+            <div className={styles.callToActionContainer}>
+              <h1 className={styles.callToActionText}>Building our Community.<br />Together.</h1>
+              <button className={styles.callToActionButton}>Make a difference<ArrowRight size={24} strokeWidth={2}/></button>
+            </div>
+            <img src={wrench} alt="Wrench" className={styles.callToActionImage} />
           </section>
         </main>
 
