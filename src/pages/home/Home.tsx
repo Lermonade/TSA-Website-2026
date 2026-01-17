@@ -14,6 +14,7 @@ import shepherdsNook from '../../assets/images/shepherdsNook.png';
 import wrench from '../../assets/images/wrench.png'
 import styles from './Home.module.css'
 import { ArrowRight, Search, ArrowUpRight } from 'lucide-react'
+import SearchBar from '../../components/searchBar'
 
 function Home() {
   return (
@@ -32,13 +33,7 @@ function Home() {
             <div className={styles.content}>
               <h1 className={styles.title}>F<span className={styles.titleKerning}>r</span>iend<span className={styles.titleKerning2}>s</span>wood, TX</h1>
               <h2 className={`interSubtitle ${styles.subtitle}`}>Community Resource Hub</h2>
-              <div className={styles.searchBar}>
-                <div className={styles.searchBarText}>
-                  <p className={styles.searchForText}>Search for</p>
-                  <TypingText />
-                </div>
-                <button className={styles.searchButton}>< Search size={24} strokeWidth={3}/></button>
-              </div>
+              <SearchBar />
             </div>
           </section>
           
