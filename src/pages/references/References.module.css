@@ -1,0 +1,19 @@
+.main {
+  background-color: var(--primaryColor);
+  padding-top: var(--navbarHeight);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+
+.hero {
+  width: 100%;
+  height: calc(100vh - var(--navbarHeight));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

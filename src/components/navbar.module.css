@@ -40,6 +40,11 @@ header {
     cursor: pointer;
 }
 
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .navigationLink:hover {
     color: var(--accentColor);
     transition: color 0.3s ease;

@@ -1,17 +1,17 @@
-import Footer from './components/footer'
-import Navbar from './components/navbar'
-import TypingText from './components/typingText'
-import Calendar from './components/calendar'
-import FAQ from './components/faq'
-import './global.css'
-import foodBank from './assets/images/foodbank.webp'
-import heroBG from './assets/images/heroBG2.png'
-import foodBankExt from './assets/images/foodbankExt.webp'
-import library from './assets/images/library.png';
-import stevensonPark from './assets/images/stevensonPark.webp';
-import pool from './assets/images/pool.png';
-import shepherdsNook from './assets/images/shepherdsNook.png';
-import wrench from './assets/images/wrench.png'
+import Footer from '../../components/footer'
+import Navbar from '../../components/navbar'
+import TypingText from '../../components/typingText'
+import Calendar from '../../components/calendar'
+import FAQ from '../../components/faq'
+import '../../global.css'
+import foodBank from '../../assets/images/foodbank.webp'
+import heroBG from '../../assets/images/heroBG2.png'
+import foodBankExt from '../../assets/images/foodbankExt.webp'
+import library from '../../assets/images/library.png';
+import stevensonPark from '../../assets/images/stevensonPark.webp';
+import pool from '../../assets/images/pool.png';
+import shepherdsNook from '../../assets/images/shepherdsNook.png';
+import wrench from '../../assets/images/wrench.png'
 import styles from './Home.module.css'
 import { ArrowRight, Search, ArrowUpRight } from 'lucide-react'
 

@@ -1,14 +1,16 @@
+import { Link } from 'react-router-dom';
 import '../global.css'
 import styles from './navbar.module.css'
 
 function Navbar() {
   return (
     <header>
-      <h2 className={styles.homeLink}>Friendswood Resources</h2>
+      <Link className={styles.link} to="/"><h2 className={styles.homeLink}>Friendswood Resources</h2></Link>
       <div className={styles.navigation}>
-        <h3 className={`interSubtitle ${styles.navigationLink}`}>Resources</h3>
-        <h3 className={`interSubtitle ${styles.navigationLink}`}>Events</h3>
-        <h3 className={`interSubtitle ${styles.navigationLink}`}>Contact Us</h3>
+        <Link className={styles.link} to="/resources"><h3 className={`interSubtitle ${styles.navigationLink}`}>Resources</h3></Link>
+        <Link className={styles.link} to="/events"><h3 className={`interSubtitle ${styles.navigationLink}`}>Events</h3></Link>
+        <Link className={styles.link} to="/references"><h3 className={`interSubtitle ${styles.navigationLink}`}>References</h3></Link>
+        <Link className={styles.link} to="/contact-us"><h3 className={`interSubtitle ${styles.navigationLink}`}>Contact Us</h3></Link>
       </div>
     </header>
   )
