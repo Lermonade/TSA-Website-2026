@@ -1,8 +1,9 @@
 import Footer from '../../components/footer'
 import Navbar from '../../components/navbar'
-import TypingText from '../../components/typingText'
-import Calendar from '../../components/calendar'
+import SearchBar from '../../components/searchBar'
+import MiniCalendar from '../../components/miniCalendar'
 import FAQ from '../../components/faq'
+import BentoBoard from '../../components/bentoBoard'
 import '../../global.css'
 import foodBank from '../../assets/images/foodbank.webp'
 import heroBG from '../../assets/images/heroBG2.png'
@@ -13,13 +14,11 @@ import pool from '../../assets/images/pool.png';
 import shepherdsNook from '../../assets/images/shepherdsNook.png';
 import wrench from '../../assets/images/wrench.png'
 import styles from './Home.module.css'
-import { ArrowRight, Search, ArrowUpRight } from 'lucide-react'
-import SearchBar from '../../components/searchBar'
+import { ArrowRight, ArrowUpRight } from 'lucide-react'
 
 function Home() {
   return (
     <>
-      <body>
         <Navbar />
         
         <main className={styles.main}>
@@ -33,7 +32,7 @@ function Home() {
             <div className={styles.content}>
               <h1 className={styles.title}>F<span className={styles.titleKerning}>r</span>iend<span className={styles.titleKerning2}>s</span>wood, TX</h1>
               <h2 className={`interSubtitle ${styles.subtitle}`}>Community Resource Hub</h2>
-              <SearchBar />
+              < SearchBar />
             </div>
           </section>
           
@@ -153,8 +152,53 @@ function Home() {
             </div>
           </section>
 
-          <section className={styles.calendar}>
-            <Calendar />
+          <section className={styles.events}>
+            <div className={styles.eventsContainer}>
+              <div className={styles.calendarContainer}>
+                < MiniCalendar />
+              </div>
+              <div className={styles.upcomingEventsContainer}>
+                <h2 className={styles.eventsHeader}>Upcoming Events</h2>
+                <div className={styles.eventCardGrid}>
+                  <div className={styles.eventCard}>
+                    <div className={styles.dateContainer}>
+                      <h3 className={styles.eventMonth}>Jan</h3>
+                      <h3 className={styles.eventDay}>18</h3>
+                    </div>
+                    <div className={styles.eventDescContainer}>
+                      <h3 className={styles.eventCardHeader}>Annual Tree Giveaway</h3>
+                      <p className={styles.eventCardDesc}> This is a cool totally fun event where you get a free tree to see if you can breed some trees to keep your garden weed free! </p>
+                    </div>
+                  </div>
+
+                  <div className={styles.eventCard}>
+                    <div className={styles.dateContainer}>
+                      <h3 className={styles.eventMonth}>Jan</h3>
+                      <h3 className={styles.eventDay}>18</h3>
+                    </div>
+                    <div className={styles.eventDescContainer}>
+                      <h3 className={styles.eventCardHeader}>Annual Tree Giveaway</h3>
+                      <p className={styles.eventCardDesc}> This is a cool totally fun event where you get a free tree to see if you can breed some trees to keep your garden weed free! </p>
+                    </div>
+                  </div>
+
+                  <div className={styles.eventCard}>
+                    <div className={styles.dateContainer}>
+                      <h3 className={styles.eventMonth}>Jan</h3>
+                      <h3 className={styles.eventDay}>18</h3>
+                    </div>
+                    <div className={styles.eventDescContainer}>
+                      <h3 className={styles.eventCardHeader}>Annual Tree Giveaway</h3>
+                      <p className={styles.eventCardDesc}> This is a cool totally fun event where you get a free tree to see if you can breed some trees to keep your garden weed free! </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className={styles.eventButtonContainer}>
+                  <button className={styles.eventsButton}>View all upcoming events <ArrowRight size={16} strokeWidth={2}/></button>
+                </div>
+              </div>
+            </div>
           </section>
 
           <section className={styles.faq}>
@@ -170,47 +214,10 @@ function Home() {
           </section>
 
           <section className={styles.bentoBoard}>
-            <h1 className={styles.bentoBoardTitle}>Gallery</h1>
-            <div className={styles.bentoBoardContainer}>
-              <div className={styles.bentoLarge}>
-                <img src={library} alt="Friendswood Library" className={styles.bentoImage}/>
-              </div>
-              <div className={styles.bentoSmall}>
-                <img src={stevensonPark} alt="Stevenson Park" className={styles.bentoImage}/>
-              </div>
-              <div className={styles.bentoLarge}>
-                <img src={pool} alt="Friendswood City Pool" className={styles.bentoImage}/>
-              </div>
-              <div className={styles.bentoSmall}>
-                <img src={shepherdsNook} alt="Shepherd's Nook" className={styles.bentoImage}/>
-              </div>
-              <div className={styles.bentoSmall}>
-                <img src={foodBankExt} alt="Houston Food Bank Exterior" className={styles.bentoImage}/>
-              </div> 
-              <div className={styles.bentoLarge}>
-                <img src={library} alt="Friendswood Library" className={styles.bentoImage}/>
-              </div>
-              <div className={styles.bentoSmall}>
-                <img src={stevensonPark} alt="Stevenson Park" className={styles.bentoImage}/>
-              </div>
-              <div className={styles.bentoSmall}>
-                <img src={foodBankExt} alt="Houston Food Bank Exterior" className={styles.bentoImage}/>
-              </div>
-              <div className={styles.bentoLarge}>
-                <img src={stevensonPark} alt="Stevenson Park" className={styles.bentoImage}/>
-              </div>
-              <div className={styles.bentoSmall}>
-                <img src={pool} alt="Friendswood City Pool" className={styles.bentoImage}/>
-              </div>
-              <div className={styles.bentoSmall}>
-                <img src={foodBankExt} alt="Houston Food Bank Exterior" className={styles.bentoImage}/>
-              </div>
-            </div>
+            <BentoBoard />
           </section>
         </main>
-
         <Footer />
-      </body>
     </>
   )
 }

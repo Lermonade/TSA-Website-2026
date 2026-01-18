@@ -1,15 +1,5 @@
-.calendar {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  padding: 64px 128px;
-  background-color: var(--primaryColor);
-}
-
 .calendarContainer {
-    width: 100%;
-    min-width: 400px;
-    margin: 0 auto;
+    height: 100%;
     border: 2px solid var(--secondaryColor);
     border-radius: 16px;
     overflow: hidden;
@@ -24,7 +14,7 @@
     padding: 16px;
     font-size: 1.25rem;
     background-color: var(--accentColor);
-    height: 50px;
+    height: 64px;
     border-bottom: 2px solid var(--secondaryColor);
 }
 
@@ -51,11 +41,12 @@
 }
 
 .body {
+    height: 80%;
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 24px 80px 80px 80px 80px 80px 80px;
-    background-color: var(--primaryColor);
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    place-items: center;
 }
 
 .weekdays {
@@ -71,22 +62,13 @@
     font-family: 'inter', sans-serif;
     font-weight: 400;
     font-size: 1rem;
-    padding-left: 2px;
-    padding-top: 2px;
-    border-right: 1.5px solid var(--secondaryColor);
-    border-top: 1.5px solid var(--secondaryColor);
-}
-
-.days:nth-child(7n) {
-  border-right: none;
+    text-align: center;
 }
 
 .dayNum {
     display: flex;
-    width: 32px;
     padding: 6px;
     justify-content: center;
-    align-items: center;
 }
 
 .dayNum.today {

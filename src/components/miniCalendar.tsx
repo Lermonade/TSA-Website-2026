@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from './calendar.module.css';
+import styles from './miniCalendar.module.css';
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const months = [
@@ -9,7 +9,7 @@ const months = [
 
 const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-const Calendar: React.FC = () => {
+const miniCalendar: React.FC = () => {
   const today = new Date();
 
   const [date, setDate] = useState({ month: today.getMonth(), year: today.getFullYear() }); //gets the date (month & year), and setDate function
@@ -50,30 +50,28 @@ const Calendar: React.FC = () => {
   for(let i = firstDayOfMonth + getDaysInMonth(currentMonth, currentYear); i < 42; i++) days.push(null);
 
   return (
-    <section className={styles.calendar}>
-      <div className={styles.calendarContainer}>
-        <div className={styles.header}>
-          <button className={styles.headerButton} onClick={prevMonth}><ChevronLeft size={24} strokeWidth={4}/></button>
-          <h2 className={styles.headerText}>{months[currentMonth]} {currentYear}</h2>
-          <button className={styles.headerButton} onClick={nextMonth}><ChevronRight size={24} strokeWidth={4}/></button>
-        </div>
-        <div className={styles.body}>
-          {weekdays.map((day) => (
-          <div key={day} className={styles.weekdays}>{day}</div>
-          ))}
-
-          {days.map((day, index) => (
-          <div
-              key={index}
-              className={styles.days}
-          >
-              <div className={`${styles.dayNum} ${day === today.getDate() && currentMonth === today.getMonth() && currentYear === today.getFullYear() ? styles.today : ""}`}>{day}</div>
-          </div>
-          ))}
-        </div>
+    <div className={styles.calendarContainer}>
+      <div className={styles.header}>
+        <button className={styles.headerButton} onClick={prevMonth}><ChevronLeft size={24} strokeWidth={4}/></button>
+        <h2 className={styles.headerText}>{months[currentMonth]} {currentYear}</h2>
+        <button className={styles.headerButton} onClick={nextMonth}><ChevronRight size={24} strokeWidth={4}/></button>
       </div>
-    </section>
+      <div className={styles.body}>
+        {weekdays.map((day) => (
+        <div key={day} className={styles.weekdays}>{day}</div>
+        ))}
+
+        {days.map((day, index) => (
+        <div
+            key={index}
+            className={styles.days}
+        >
+            <div className={`${styles.dayNum} ${day === today.getDate() && currentMonth === today.getMonth() && currentYear === today.getFullYear() ? styles.today : ""}`}>{day}</div>
+        </div>
+        ))}
+      </div>
+    </div>
   );
 };
 
-export default Calendar;
+export default miniCalendar;
