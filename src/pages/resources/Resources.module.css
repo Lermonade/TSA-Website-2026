@@ -76,7 +76,7 @@
 
 .itemGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 32px;
 
   height: 100%;
@@ -86,8 +86,86 @@
 .gridItem {
   background-color: var(--primaryColor);
   box-shadow: var(--shadow-elevation-medium);
-  height: 250px;
+
+  height: auto;
+  width: 100%;
+  border-radius: 16px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.gridItemImage {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.mapCircle {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+
+  height: 48px;
+  width: 48px;
+  background-color: var(--primaryColor);
+  border: 2px solid var(--secondaryColor);
+  border-radius: 16px;
+
+  z-index: 5;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.1s;
+}
+
+.mapCircle:hover {
+  scale: 1.05;
+}
+
+.cardContent {
+  height: 10px;
+  flex-grow: 1;
   width: 100%;
 
+  padding: 18px 16px;
+}
+
+.cardTopicBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cardTopic {
+
+  height: 28px;
+  width: 36px;
+  
+  background-color: var(--accentColor);
+  box-shadow: var(--shadow-elevation-low);
+  
   border-radius: 16px;
+  margin-right: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.cardTopic:hover {
+  scale: 1.05;
 }

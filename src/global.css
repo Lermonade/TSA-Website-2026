@@ -7,6 +7,7 @@
     --accentColor: #8DE8FF;
 
     --textColor: #000000;
+    --lightTextColor: #444444;
     
     --navbarHeight: 64px;
     --shadow-color: 0deg 0% 66%;
@@ -69,4 +70,33 @@ body {
 
     font-weight: 450;
     letter-spacing: 0.02em;
+}
+
+.interHeader {
+    font-family: 'inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.interText {
+    font-family: 'inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+}
+
+.interDescription {
+    font-family: 'inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    color: var(--lightTextColor);
+}
+
+.bradfordHeader {
+    font-family: Bradford LL;
+    font-weight: 450;
+    letter-spacing: -0.02em;
+
+    cursor: pointer;
 }
