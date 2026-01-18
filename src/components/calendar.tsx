@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "./calendar.module.css";
-import styles from './calendar.module.css'
+import styles from './calendar.module.css';
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const months = [

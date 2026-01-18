@@ -104,14 +104,14 @@ const FAQ: React.FC = () => {
       <h1 className={styles.faqTitle}>Frequently Asked Questions</h1>
         <div className={styles.faqGrid}>
           {faqData.map((cell, index) => (
-            <div className={styles.faqCell} key={index}>
-              <div className={styles.faqQuestion}>
+            <div className={`${styles.faqCell} ${openIndex === index ? styles.open : ""}`} key={index}>
+              <div className={styles.faqQuestion} onClick={() => toggleQuestion(index)}>
                 <h2 className={styles.questionText}>{cell.question}</h2>  
-                <button className={styles.questionButton} onClick={() => toggleQuestion(index)}>
+                <button className={styles.questionButton}>
                   {openIndex === index ? <Minus size={32} strokeWidth={2} /> : <Plus size={32} strokeWidth={2} />}
                 </button>
               </div>
-              <div className={`${styles.faqAnswer} ${openIndex === index ? styles.open : ""}`}>
+              <div className={styles.faqAnswer}>
                 <p className={styles.answerText}>{cell.answer}</p>
               </div>
             </div>

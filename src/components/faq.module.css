@@ -16,20 +16,24 @@
 }
 
 .faqCell {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 50px 0fr;
+  transition: grid-template-rows 0.3s ease-in-out;
   width: 100%;
   border-top: 4px solid var(--secondaryColor);
-  padding: 0 16px;
-  overflow: hidden;
+  padding: 16px 16px;
 }
 
 .faqCell:nth-child(5n){
   border-bottom: 4px solid var(--secondaryColor);
 }
 
+.faqCell.open {
+  grid-template-rows: 50px 1fr;
+}
+
 .faqQuestion {
-  height: 80px;
+  height: 50px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -61,12 +65,5 @@
   font-family: 'inter', sans-serif;
   font-weight: 400;
   font-size: 1.1rem;
-  overflow: hidden;                     /* clip content when collapsed */
-  max-height: 0; 
-  transition: max-height 1.5s ease, margin .4s ease; 
-}
-
-.faqAnswer.open {
-  max-height: min-content;
-  margin-bottom: 32px;
+  overflow: hidden;
 }
